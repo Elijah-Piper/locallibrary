@@ -81,6 +81,7 @@ class BookListView(generic.ListView):
 	model = Book
 	paginate_by = 10
 
+
 class BookDetailView(generic.DetailView):
 	model = Book
 
@@ -89,8 +90,10 @@ class AuthorListView(generic.ListView):
 	model = Author
 	paginate_by = 10
 
+
 class AuthorDetailView(generic.DetailView):
 	model = Author
+
 
 class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
 	"""Generic class-based view listing books on loan to the current user."""
@@ -117,7 +120,7 @@ class AuthorCreate(PermissionRequiredMixin, CreateView):
 	permission_required = 'catalog.can_mark_returned'
 
 	model = Author
-	fields = '__all__'
+	fields = ('first_name', 'last_name', 'date_of_birth', 'date_of_death')
 
 
 class AuthorUpdate(PermissionRequiredMixin, UpdateView):
