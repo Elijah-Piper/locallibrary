@@ -32,6 +32,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'FALSE'
 
 ALLOWED_HOSTS = [
     'fathomless-brook-45657.herokuapp.com' ,
+    '127.0.0.1'
 ]
 
 
