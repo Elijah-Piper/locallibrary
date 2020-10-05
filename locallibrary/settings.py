@@ -30,7 +30,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'y5s2ej=bo!wvb@0el$yn1o17v#o2v!
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'FALSE'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'fathomless-brook-45657.herokuapp.com' ,
+]
 
 
 # Application definition
